@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <sport>
+        <h1>{{ category.name }}</h1>
+    </sport>
+    <section class="gears">
+        {% for gear in category.gears %}
+            <gear>
+                <h2>{{ gear.name }}</h2>
+                <img src="{{ gear.image }}" alt="">
+                {{ gear.description | raw }}
+                <a href="{{ path('site_show', {'id': gear.id}) }}" class="btn btn-primary">See the product</a>
+            </gear>
+        {% endfor %}
+    </section>
+{% endblock %}

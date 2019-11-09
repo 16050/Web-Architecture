@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% form_theme formGear 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+    <h1>Add new gear</h1>
+    {{ form_start(formGear) }}
+    {{ form_row(formGear.name, {'attr': {'placeholder':"product name"}}) }}
+    {{ form_row(formGear.image, {'attr': {'placeholder':"image URL"}}) }}
+    {{ form_row(formGear.sport) }}
+    {{ form_row(formGear.category) }}
+    {{ form_row(formGear.gender) }}
+    {{ form_row(formGear.description, {'attr': {'placeholder':"product description"}}) }}
+    {{ form_row(formGear.link, {'attr': {'placeholder':"link to buy"}}) }}
+    <button type="submit" class="btn btn-success">
+        {% if editMode %}
+            Save changes
+        {% else %}
+            Add gear
+        {% endif %}
+    </button>
+    {{ form_end(formGear) }}
+{% endblock %}

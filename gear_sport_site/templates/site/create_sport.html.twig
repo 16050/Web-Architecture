@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% form_theme formSport 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+    <h1>Add new sport</h1>
+    {{ form_start(formSport) }}
+    {{ form_row(formSport.name, {'attr': {'placeholder':"sport name"}}) }}
+    {{ form_row(formSport.description, {'attr': {'placeholder':"sport description"}}) }}
+    <button type="submit" class="btn btn-success">Add sport</button>
+    {{ form_end(formSport) }}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sports list{% endblock %}
+
+{% block body %}
+    <section class="sports">
+        {% for sport in sports %}
+            <p>
+                <sport>
+                    <a href="{{ path('sport_show', {'id': sport.id}) }}">{{ sport.name }}</a>
+                </sport>
+            </p>
+        {% endfor %}
+    </section>
+{% endblock %}

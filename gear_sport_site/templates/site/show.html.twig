@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <gear>
+        <h2>{{ gear.name }}</h2>
+        <img src="{{ gear.image }}" alt="">
+        <p><a href="{{ path('sport_show', {'id': gear.sport.id}) }}">{{ gear.sport.name }}</a></p>
+        <a href="{{ path('category_show', {'id': gear.category.id}) }}">{{ gear.category.name }}</a>
+        {{ gear.gender | raw }}
+        {{ gear.description | raw }}
+        <a href="{{ gear.link }}" class="btn btn-primary">Buy the product</a>
+    </gear>
+{% endblock %}
