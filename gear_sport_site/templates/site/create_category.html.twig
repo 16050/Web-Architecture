@@ -1,9 +1,13 @@
 {% extends 'base.html.twig' %}
 {% form_theme formCategory 'bootstrap_4_layout.html.twig' %}
 {% block body %}
-    <h1>Add new category</h1>
-    {{ form_start(formCategory) }}
-    {{ form_row(formCategory.name, {'attr': {'placeholder':"category name"}}) }}
-    <button type="submit" class="btn btn-success">Add category</button>
-    {{ form_end(formCategory) }}
+    {% if not app.user %}
+        <h2><a href="{{ path('security_login') }}">Log in</a> or <a href="{{ path('security_registration') }}">create an account</a> to add a new category</h2>
+    {% else %}
+        <h1>Add new category</h1>
+        {{ form_start(formCategory) }}
+        {{ form_row(formCategory.name, {'attr': {'placeholder':"category name"}}) }}
+        <button type="submit" class="btn btn-success">Add category</button>
+        {{ form_end(formCategory) }}
+    {% endif %}
 {% endblock %}
