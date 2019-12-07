@@ -21,6 +21,7 @@ class SportType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Sport::class,
+            'csrf_protection'=>false
         ]);
     }
 }

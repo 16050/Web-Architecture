@@ -55,9 +55,6 @@ class SiteController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            if(!$gear->getId()){
-                $gear->setAddedAt(new \DateTime());
-            }
             $manager->persist($gear);
             $manager->flush();
 

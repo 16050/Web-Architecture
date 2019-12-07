@@ -43,6 +43,8 @@ class GearType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Gear::class,
+            'allow_extra_fields'=>true,
+            'csrf_protection'=>false
         ]);
     }
 }

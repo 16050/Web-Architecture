@@ -9,8 +9,8 @@
             <h2>{{ gear.name }}</h2>
             <img src="{{ gear.image }}" alt="">
             <p>{{ gear.description | raw }}</p>
-            <a href="{{ path('site_show', {'id': gear.id}) }}" class="btn btn-primary">See the product</a>
-            <a href="{{ path('gear_edit', {'id': gear.id}) }}" class="btn btn-primary">Edit product</a>
+            <a href="{{ path('site_show', {'id': gear.id}) }}" class="btn btn-success">See the product</a>
+            <a href="{{ path('gear_edit', {'id': gear.id}) }}" class="btn btn-success">Edit product</a>
         </gear>
         {% endfor %}
     </section>

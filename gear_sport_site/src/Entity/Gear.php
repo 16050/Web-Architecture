@@ -41,11 +41,6 @@ class Gear
     private $image;
 
     /**
-     * @ORM\Column(type="datetime")
-     */
-    private $addedAt;
-
-    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $link;
@@ -111,18 +106,6 @@ class Gear
     public function setImage(string $image): self
     {
         $this->image = $image;
-
-        return $this;
-    }
-
-    public function getAddedAt(): ?\DateTimeInterface
-    {
-        return $this->addedAt;
-    }
-
-    public function setAddedAt(\DateTimeInterface $addedAt): self
-    {
-        $this->addedAt = $addedAt;
 
         return $this;
     }

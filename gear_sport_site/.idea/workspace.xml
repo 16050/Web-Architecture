@@ -15,19 +15,24 @@
     <session id="-2014259758">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.16" value="5" />
-          <entry key="project.open.time.17" value="4" />
+          <entry key="project.open.time.16" value="6" />
+          <entry key="project.open.time.17" value="6" />
+          <entry key="project.open.time.18" value="3" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.32" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -36,10 +41,10 @@
           <entry key="env" value="1" />
           <entry key="html" value="2" />
           <entry key="json" value="2" />
-          <entry key="php" value="28" />
+          <entry key="php" value="45" />
           <entry key="show_category" value="1" />
-          <entry key="twig" value="52" />
-          <entry key="yaml" value="4" />
+          <entry key="twig" value="59" />
+          <entry key="yaml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -47,9 +52,9 @@
           <entry key=".env file" value="1" />
           <entry key="HTML" value="2" />
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="28" />
-          <entry key="Twig" value="54" />
-          <entry key="YAML" value="4" />
+          <entry key="PHP" value="45" />
+          <entry key="Twig" value="61" />
+          <entry key="YAML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -57,9 +62,9 @@
           <entry key="create_category" value="26" />
           <entry key="env" value="23" />
           <entry key="html" value="11" />
-          <entry key="php" value="2781" />
+          <entry key="php" value="4088" />
           <entry key="show_category" value="1" />
-          <entry key="twig" value="1938" />
+          <entry key="twig" value="1954" />
           <entry key="yaml" value="249" />
         </counts>
       </usages-collector>
@@ -67,8 +72,8 @@
         <counts>
           <entry key=".env file" value="23" />
           <entry key="HTML" value="11" />
-          <entry key="PHP" value="2781" />
-          <entry key="Twig" value="1965" />
+          <entry key="PHP" value="4088" />
+          <entry key="Twig" value="1981" />
           <entry key="YAML" value="249" />
         </counts>
       </usages-collector>
@@ -77,61 +82,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-              <folding>
-                <element signature="e#34#54#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/site/create_category.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="899">
+              <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/SiteController.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1660">
-              <caret line="46" column="23" lean-forward="true" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
-              <folding>
-                <element signature="e#34#54#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+        <entry file="file://$PROJECT_DIR$/config/routes/annotations.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="34" column="26" selection-start-line="34" selection-end-line="35" />
+            <state relative-caret-position="34">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/site/create.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/Form/SportType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="340">
+              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/site/create_sport.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/Form/RegistrationType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+            <state relative-caret-position="177">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Form/GearType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="46" column="35" selection-start-line="46" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -144,21 +143,14 @@
         <option value="$PROJECT_DIR$/templates/site/home.html.twig" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/packages/twig.yaml" />
-        <option value="$PROJECT_DIR$/src/Entity/Gear.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/DataFixtures/GearFixtures.php" />
         <option value="$PROJECT_DIR$/templates/site/create_sport.html.twig" />
         <option value="$PROJECT_DIR$/templates/site/show_sport.html" />
-        <option value="$PROJECT_DIR$/templates/site/show_sport.html.twig" />
         <option value="$PROJECT_DIR$/templates/site/create_category" />
         <option value="$PROJECT_DIR$/templates/site/show_category.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/SiteController.php" />
-        <option value="$PROJECT_DIR$/src/Form/GearType.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Sport.php" />
-        <option value="$PROJECT_DIR$/templates/site/show.html.twig" />
         <option value="$PROJECT_DIR$/templates/site/categories.html.twig" />
         <option value="$PROJECT_DIR$/templates/site/sports.html.twig" />
-        <option value="$PROJECT_DIR$/templates/site/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationType.php" />
         <option value="$PROJECT_DIR$/templates/security/registration.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/User.php" />
@@ -168,6 +160,16 @@
         <option value="$PROJECT_DIR$/templates/site/create.html.twig" />
         <option value="$PROJECT_DIR$/templates/site/create_category.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/SecurityController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Sport.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Gear.php" />
+        <option value="$PROJECT_DIR$/src/Form/GearType.php" />
+        <option value="$PROJECT_DIR$/templates/site/show_sport.html.twig" />
+        <option value="$PROJECT_DIR$/templates/site/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/site/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/SiteController.php" />
+        <option value="$PROJECT_DIR$/src/Form/CategoryType.php" />
+        <option value="$PROJECT_DIR$/src/Form/SportType.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ApiController.php" />
       </list>
     </option>
   </component>
@@ -180,7 +182,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
@@ -290,19 +292,23 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/jsonp-callback-validator" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="98" />
-    <option name="y" value="45" />
-    <option name="width" value="888" />
-    <option name="height" value="565" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="179" />
+    <option name="y" value="26" />
+    <option name="width" value="955" />
+    <option name="height" value="603" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -313,24 +319,46 @@
             <path>
               <item name="gear_sport_site" type="b2602c69:ProjectViewProjectNode" />
               <item name="gear_sport_site" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gear_sport_site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gear_sport_site" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gear_sport_site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gear_sport_site" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gear_sport_site" type="b2602c69:ProjectViewProjectNode" />
               <item name="gear_sport_site" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gear_sport_site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gear_sport_site" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gear_sport_site" type="b2602c69:ProjectViewProjectNode" />
               <item name="gear_sport_site" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="gear_sport_site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gear_sport_site" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,18 +407,28 @@
       <workItem from="1573408526840" duration="2901000" />
       <workItem from="1573476927418" duration="8656000" />
       <workItem from="1573554203940" duration="5339000" />
-      <workItem from="1573630576975" duration="5202000" />
+      <workItem from="1573630576975" duration="5776000" />
+      <workItem from="1573931182117" duration="597000" />
+      <workItem from="1573985279541" duration="1749000" />
+      <workItem from="1574016929154" duration="1543000" />
+      <workItem from="1574240007029" duration="7624000" />
+      <workItem from="1574941931755" duration="3070000" />
+      <workItem from="1574971110259" duration="594000" />
+      <workItem from="1575038611261" duration="4338000" />
+      <workItem from="1575299946290" duration="1188000" />
+      <workItem from="1575303442716" duration="1889000" />
+      <workItem from="1575449788963" duration="3708000" />
+      <workItem from="1575724990504" duration="5614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85686000" />
+    <option name="totallyTimeSpent" value="118174000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="98" y="45" width="888" height="565" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22463769" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15279879" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -403,19 +441,53 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2761021" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.19508196" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14372164" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.19508196" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Entity/Gear.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/config/packages/twig.yaml">
@@ -454,22 +526,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/site/show_sport.html" />
-    <entry file="file://$PROJECT_DIR$/src/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/site/create_category" />
     <entry file="file://$PROJECT_DIR$/templates/site/show_category" />
-    <entry file="file://$PROJECT_DIR$/src/Entity/Sport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/site/sports.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -477,58 +535,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/GearType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/site/show_sport.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/site/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/site/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Gear.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -553,13 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/site/create_sport.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/site/categories.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -574,44 +577,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/site/create.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/site/create_sport.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="34" column="26" selection-start-line="34" selection-end-line="35" />
+        <state relative-caret-position="119">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Sport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/CategoryRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/GearRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/SportRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/SportCategoryRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-475" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/site/show_sport.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/site/create.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/site/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/site/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/api/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/site/create_category.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Gear.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
           <folding>
-            <element signature="e#34#54#0#PHP" expanded="true" />
+            <element signature="e#30#62#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/site/create_category.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Form/GearType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="338">
+          <caret line="46" column="35" selection-start-line="46" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/CategoryType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/SportType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes/annotations.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1660">
-          <caret line="46" column="23" lean-forward="true" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
-          <folding>
-            <element signature="e#34#54#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="899">
+          <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
