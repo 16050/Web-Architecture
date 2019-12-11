@@ -23,7 +23,7 @@ use App\Form\SportType;
 class ApiController extends AbstractController
 {
     /**
-     * @Rest\Post("/api")
+     * @Rest\Get("/api")
      */
     public function APIindex()
     {
@@ -45,7 +45,7 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @Rest\Post("/api/sports")
+     * @Rest\Get("/api/sports")
      */
     public function APIsports()
     {
@@ -67,7 +67,7 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @Rest\Post("/api/categories")
+     * @Rest\Get("/api/categories")
      */
     public function APIcategories()
     {
@@ -89,7 +89,8 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @Rest\Post("/api/new")
+     * @Rest\Put("/api/new")
+     * @Rest\Post("/api/{id}/edit")
      */
     public function APIformGear(Gear $gear = null, Request $request)
     {
@@ -123,7 +124,7 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @Rest\Post("/api/new_category")
+     * @Rest\Put("/api/new_category")
      */
     public function APIformCategory(Category $category = null, Request $request)
     {
@@ -155,7 +156,7 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @Rest\Post("/api/new_sport")
+     * @Rest\Put("/api/new_sport")
      */
     public function APIformSport(Sport $sport = null, Request $request)
     {
@@ -182,7 +183,6 @@ class ApiController extends AbstractController
                 'status' => 'Sport added',
                 'HTTP' => JsonResponse::HTTP_CREATED
             ]
-
         );
     }
 }
