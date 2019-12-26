@@ -213,4 +213,14 @@ class ApiController extends AbstractController
         $response->setContent($jsonContent);
         return $response;
     }
+
+    /**
+     * @Rest\Get("/api/delete/game/{id}")
+     */
+    public function DeleteGame(Gear $gear, Request $request, ObjectManager $manager)
+    {
+        $manager->remove($gear);
+        $manager->flush();
+        return new Response('', Response::HTTP_CREATED);
+    }
 }
