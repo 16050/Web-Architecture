@@ -19,6 +19,7 @@ use FOS\RestBundle\Controller\Annotations as Rest;
 use App\Form\GearType;
 use Faker\Provider\DateTime;
 use App\Form\SportType;
+use Symfony\Component\Serializer\Normalizer\JsonSerializableNormalizer;
 
 class ApiController extends AbstractController
 {
@@ -27,18 +28,20 @@ class ApiController extends AbstractController
      */
     public function APIindex()
     {
+        $repo = $this->getDoctrine()->getRepository(Gear::class);
+        $gears = $repo->findAll();
+
         $encoders = array(new JsonEncoder());
         $normalizer = new ObjectNormalizer();
         $normalizer->setCircularReferenceLimit(2);
+
         $normalizer->setCircularReferenceHandler(function ($object) {
             return $object->getId();
         });
         $normalizers = array($normalizer);
         $serializer = new Serializer($normalizers, $encoders);
-        $elements = $this->getDoctrine()->getManager();
-        $sports = $elements->getRepository('App:Gear')->findAll();
 
-        $jsonContent = $serializer->serialize($sports, 'json');
+        $jsonContent = $serializer->serialize($gears, 'json');
         $response = new JsonResponse();
         $response->setContent($jsonContent);
         return $response;
@@ -69,7 +72,7 @@ class ApiController extends AbstractController
     /**
      * @Rest\Get("/api/categories")
      */
-    public function APIcategories()
+    public function APIcategories(Request $request)
     {
         $encoders = array(new JsonEncoder());
         $normalizer = new ObjectNormalizer();
@@ -184,5 +187,30 @@ class ApiController extends AbstractController
                 'HTTP' => JsonResponse::HTTP_CREATED
             ]
         );
+    }
+
+    /**
+     * @Rest\Get("/api/{id}")
+     */
+    public function APIshow($id)
+    {
+        $encoders = array(new JsonEncoder());
+        $normalizer = new ObjectNormalizer();
+        /*$normalizer = new ObjectNormalizer(null,null,null,null,null,null,array(ObjectNormalizer::CIRCULAR_REFERENCE_HANDLER=>function ($object) {
+            return $object->getId();
+        }));*/
+        $normalizer->setCircularReferenceLimit(2);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+        $normalizers = array($normalizer);
+        $serializer = new Serializer($normalizers, $encoders);
+        $elements = $this->getDoctrine()->getManager();
+        $gear = $elements->getRepository('App:Gear')->find($id);
+
+        $jsonContent = $serializer->serialize($gear, 'json');
+        $response = new JsonResponse();
+        $response->setContent($jsonContent);
+        return $response;
     }
 }

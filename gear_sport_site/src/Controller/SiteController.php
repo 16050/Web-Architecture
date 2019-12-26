@@ -184,4 +184,15 @@ class SiteController extends AbstractController
             'gear' => $gear
         ]);
     }
+
+    /**
+     * @Route("/site/delete/gear/{id}", name="delete_gear")
+     */
+    public function Delete(Gear $gear, Request $request, ObjectManager $manager)
+    {
+        $manager->remove($gear);
+        $manager->flush();
+        $this->addFlash('suppression', 'gear deleted'); // flash message
+        return $this->redirectToRoute('site');
+    }
 }
