@@ -24,17 +24,26 @@ use Symfony\Component\Serializer\Normalizer\JsonSerializableNormalizer;
 class ApiController extends AbstractController
 {
     /**
-     * @Rest\Get("/api")
+     * @Route("api/",name="api_index", methods={"GET", "OPTIONS"})
      */
-    public function APIindex()
+    public function APIindex(Request $request)
     {
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
+        {
+            $response= new Response();
+            $response->headers->set('Content-Type', 'application/text');
+            $response->headers->set('Access-Control-Allow-Origin', '*');
+            $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+            $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+            return $response;   
+        }
+
         $repo = $this->getDoctrine()->getRepository(Gear::class);
         $gears = $repo->findAll();
 
         $encoders = array(new JsonEncoder());
         $normalizer = new ObjectNormalizer();
-        $normalizer->setCircularReferenceLimit(2);
-
+        $normalizer->setCircularReferenceLimit(0);
         $normalizer->setCircularReferenceHandler(function ($object) {
             return $object->getId();
         });
@@ -43,6 +52,10 @@ class ApiController extends AbstractController
 
         $jsonContent = $serializer->serialize($gears, 'json');
         $response = new JsonResponse();
+        $response->headers->set('Content-Type', 'application/text');
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
         $response->setContent($jsonContent);
         return $response;
     }
@@ -54,7 +67,7 @@ class ApiController extends AbstractController
     {
         $encoders = array(new JsonEncoder());
         $normalizer = new ObjectNormalizer();
-        $normalizer->setCircularReferenceLimit(2);
+        $normalizer->setCircularReferenceLimit(0);
         $normalizer->setCircularReferenceHandler(function ($object) {
             return $object->getId();
         });
@@ -196,10 +209,7 @@ class ApiController extends AbstractController
     {
         $encoders = array(new JsonEncoder());
         $normalizer = new ObjectNormalizer();
-        /*$normalizer = new ObjectNormalizer(null,null,null,null,null,null,array(ObjectNormalizer::CIRCULAR_REFERENCE_HANDLER=>function ($object) {
-            return $object->getId();
-        }));*/
-        $normalizer->setCircularReferenceLimit(2);
+        $normalizer->setCircularReferenceLimit(0);
         $normalizer->setCircularReferenceHandler(function ($object) {
             return $object->getId();
         });
