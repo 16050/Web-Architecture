@@ -61,9 +61,83 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @Rest\Get("/api/sports")
+     * @Route("api/sports/",name="api_sports", methods={"GET", "OPTIONS"})
      */
-    public function APIsports()
+    public function APIsports(Request $request)
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
+        {
+            $response= new Response();
+            $response->headers->set('Content-Type', 'application/text');
+            $response->headers->set('Access-Control-Allow-Origin', '*');
+            $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+            $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+            return $response;
+        }
+
+        $repo = $this->getDoctrine()->getRepository(Sport::class);
+        $sports = $repo->findAll();
+
+        $encoders = array(new JsonEncoder());
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceLimit(0);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+        $normalizers = array($normalizer);
+        $serializer = new Serializer($normalizers, $encoders);
+
+        $jsonContent = $serializer->serialize($sports, 'json');
+        $response = new JsonResponse();
+        $response->headers->set('Content-Type', 'application/text');
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+        $response->setContent($jsonContent);
+        return $response;
+    }
+
+    /**
+     * @Route("api/categories/",name="api_categories", methods={"GET", "OPTIONS"})
+     */
+    public function APIcategories(Request $request)
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
+        {
+            $response= new Response();
+            $response->headers->set('Content-Type', 'application/text');
+            $response->headers->set('Access-Control-Allow-Origin', '*');
+            $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+            $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+            return $response;
+        }
+
+        $repo = $this->getDoctrine()->getRepository(Category::class);
+        $categories = $repo->findAll();
+
+        $encoders = array(new JsonEncoder());
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceLimit(0);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+        $normalizers = array($normalizer);
+        $serializer = new Serializer($normalizers, $encoders);
+
+        $jsonContent = $serializer->serialize($categories, 'json');
+        $response = new JsonResponse();
+        $response->headers->set('Content-Type', 'application/text');
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+        $response->setContent($jsonContent);
+        return $response;
+    }
+
+    /**
+     * @Rest\Get("/api/sports/{id}")
+     */
+    public function APIshowSport($id)
     {
         $encoders = array(new JsonEncoder());
         $normalizer = new ObjectNormalizer();
@@ -74,31 +148,31 @@ class ApiController extends AbstractController
         $normalizers = array($normalizer);
         $serializer = new Serializer($normalizers, $encoders);
         $elements = $this->getDoctrine()->getManager();
-        $sports = $elements->getRepository('App:Sport')->findAll();
+        $sport = $elements->getRepository('App:Sport')->find($id);
 
-        $jsonContent = $serializer->serialize($sports, 'json');
+        $jsonContent = $serializer->serialize($sport, 'json');
         $response = new JsonResponse();
         $response->setContent($jsonContent);
         return $response;
     }
 
     /**
-     * @Rest\Get("/api/categories")
+     * @Rest\Get("/api/categories/{id}")
      */
-    public function APIcategories(Request $request)
+    public function APIshowCategory($id)
     {
         $encoders = array(new JsonEncoder());
         $normalizer = new ObjectNormalizer();
-        $normalizer->setCircularReferenceLimit(2);
+        $normalizer->setCircularReferenceLimit(0);
         $normalizer->setCircularReferenceHandler(function ($object) {
             return $object->getId();
         });
         $normalizers = array($normalizer);
         $serializer = new Serializer($normalizers, $encoders);
         $elements = $this->getDoctrine()->getManager();
-        $sports = $elements->getRepository('App:Category')->findAll();
+        $category = $elements->getRepository('App:Category')->find($id);
 
-        $jsonContent = $serializer->serialize($sports, 'json');
+        $jsonContent = $serializer->serialize($category, 'json');
         $response = new JsonResponse();
         $response->setContent($jsonContent);
         return $response;
@@ -225,7 +299,7 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @Rest\Get("/api/delete/game/{id}")
+     * @Rest\Get("/api/delete/gear/{id}")
      */
     public function DeleteGame(Gear $gear, Request $request, ObjectManager $manager)
     {
