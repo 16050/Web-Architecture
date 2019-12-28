@@ -28,6 +28,7 @@ class ApiController extends AbstractController
      */
     public function APIindex(Request $request)
     {
+        //CORS
         if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
         {
             $response= new Response();
@@ -277,10 +278,22 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @Rest\Get("/api/{id}")
+     * @Route("api/{id}",name="api_show", methods={"GET", "OPTIONS"})
      */
-    public function APIshow($id)
+    public function APIshow($id,Request $request)
     {
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
+        {
+            $response= new Response();
+            $response->headers->set('Content-Type', 'application/text');
+            $response->headers->set('Access-Control-Allow-Origin', '*');
+            $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+            $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+            return $response;
+        }
+
+        $repo = $this->getDoctrine()->getRepository(Gear::class);
+
         $encoders = array(new JsonEncoder());
         $normalizer = new ObjectNormalizer();
         $normalizer->setCircularReferenceLimit(0);
@@ -294,6 +307,10 @@ class ApiController extends AbstractController
 
         $jsonContent = $serializer->serialize($gear, 'json');
         $response = new JsonResponse();
+        $response->headers->set('Content-Type', 'application/text');
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
         $response->setContent($jsonContent);
         return $response;
     }
