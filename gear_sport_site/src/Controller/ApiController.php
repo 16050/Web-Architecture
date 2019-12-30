@@ -28,7 +28,6 @@ class ApiController extends AbstractController
      */
     public function APIindex(Request $request)
     {
-        //CORS
         if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
         {
             $response= new Response();
@@ -136,10 +135,20 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @Rest\Get("/api/sports/{id}")
+     * @Route("api/sports/{id}",name="api_show_sport", methods={"GET", "OPTIONS"})
      */
     public function APIshowSport($id)
     {
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
+        {
+            $response= new Response();
+            $response->headers->set('Content-Type', 'application/text');
+            $response->headers->set('Access-Control-Allow-Origin', '*');
+            $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+            $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+            return $response;
+        }
+
         $encoders = array(new JsonEncoder());
         $normalizer = new ObjectNormalizer();
         $normalizer->setCircularReferenceLimit(0);
@@ -153,15 +162,29 @@ class ApiController extends AbstractController
 
         $jsonContent = $serializer->serialize($sport, 'json');
         $response = new JsonResponse();
+        $response->headers->set('Content-Type', 'application/text');
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
         $response->setContent($jsonContent);
         return $response;
     }
 
     /**
-     * @Rest\Get("/api/categories/{id}")
+     * @Route("api/categories/{id}",name="api_show_categories", methods={"GET", "OPTIONS"})
      */
     public function APIshowCategory($id)
     {
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
+        {
+            $response= new Response();
+            $response->headers->set('Content-Type', 'application/text');
+            $response->headers->set('Access-Control-Allow-Origin', '*');
+            $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+            $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+            return $response;
+        }
+
         $encoders = array(new JsonEncoder());
         $normalizer = new ObjectNormalizer();
         $normalizer->setCircularReferenceLimit(0);
@@ -175,16 +198,29 @@ class ApiController extends AbstractController
 
         $jsonContent = $serializer->serialize($category, 'json');
         $response = new JsonResponse();
+        $response->headers->set('Content-Type', 'application/text');
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
         $response->setContent($jsonContent);
         return $response;
     }
 
     /**
-     * @Rest\Put("/api/new")
-     * @Rest\Post("/api/{id}/edit")
+     * @Route("/api/new",name="api_add_gear", methods={"POST", "OPTIONS"})
+     * @Route("/api/{id}/edit", name="api_edit_gear", methods={"PUT", "OPTIONS"})
      */
     public function APIformGear(Gear $gear = null, Request $request)
     {
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
+        {
+            $response= new Response();
+            $response->headers->set('Content-Type', 'application/text');
+            $response->headers->set('Access-Control-Allow-Origin', '*');
+            $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+            $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+            return $response;
+        }
         $data = json_decode($request->getContent(), true);
         if (!$gear) {
             $gear = new Gear();
@@ -205,20 +241,29 @@ class ApiController extends AbstractController
         $doctrine = $this->getDoctrine()->getManager();
         $doctrine->persist($gear);
         $doctrine->flush();
-        return new JsonResponse(
-            [
-                'status' => 'Gear added',
-                'HTTP' => JsonResponse::HTTP_CREATED
-            ]
-
-        );
+        $response= new JsonResponse();
+        $response->headers->set('Content-Type', 'application/text');
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+        return $response;
     }
 
     /**
-     * @Rest\Put("/api/new_category")
+     * @Route("/api/new_category",name="api_add_category", methods={"POST", "OPTIONS"})
      */
     public function APIformCategory(Category $category = null, Request $request)
     {
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
+        {
+            $response= new Response();
+            $response->headers->set('Content-Type', 'application/text');
+            $response->headers->set('Access-Control-Allow-Origin', '*');
+            $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+            $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+            return $response;
+        }
+
         $data = json_decode($request->getContent(), true);
         $category = new Category();
         $form = $this->createForm(CategoryType::class, $category);
@@ -237,20 +282,29 @@ class ApiController extends AbstractController
         $doctrine = $this->getDoctrine()->getManager();
         $doctrine->persist($category);
         $doctrine->flush();
-        return new JsonResponse(
-            [
-                'status' => 'Category added',
-                'HTTP' => JsonResponse::HTTP_CREATED
-            ]
-
-        );
+        $response= new JsonResponse();
+        $response->headers->set('Content-Type', 'application/text');
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+        return $response;
     }
 
     /**
-     * @Rest\Put("/api/new_sport")
+     * @Route("/api/new_sport",name="api_add_category", methods={"POST", "OPTIONS"})
      */
     public function APIformSport(Sport $sport = null, Request $request)
     {
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
+        {
+            $response= new Response();
+            $response->headers->set('Content-Type', 'application/text');
+            $response->headers->set('Access-Control-Allow-Origin', '*');
+            $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+            $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+            return $response;
+        }
+
         $data = json_decode($request->getContent(), true);
         $sport = new Sport();
         $form = $this->createForm(SportType::class, $sport);
@@ -269,12 +323,12 @@ class ApiController extends AbstractController
         $doctrine = $this->getDoctrine()->getManager();
         $doctrine->persist($sport);
         $doctrine->flush();
-        return new JsonResponse(
-            [
-                'status' => 'Sport added',
-                'HTTP' => JsonResponse::HTTP_CREATED
-            ]
-        );
+        $response= new JsonResponse();
+        $response->headers->set('Content-Type', 'application/text');
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+        return $response;
     }
 
     /**
@@ -291,8 +345,6 @@ class ApiController extends AbstractController
             $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
             return $response;
         }
-
-        $repo = $this->getDoctrine()->getRepository(Gear::class);
 
         $encoders = array(new JsonEncoder());
         $normalizer = new ObjectNormalizer();
@@ -316,12 +368,27 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @Rest\Get("/api/delete/gear/{id}")
+     * @Route("/api/delete/gear/{id}",name="api_delete", methods={"DELETE", "OPTIONS"})
      */
-    public function DeleteGame(Gear $gear, Request $request, ObjectManager $manager)
+    public function deleteGear(Gear $gear, Request $request, ObjectManager $manager)
     {
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
+        {
+            $response= new Response();
+            $response->headers->set('Content-Type', 'application/text');
+            $response->headers->set('Access-Control-Allow-Origin', '*');
+            $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+            $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+            return $response;
+        }
+
         $manager->remove($gear);
         $manager->flush();
-        return new Response('', Response::HTTP_CREATED);
+        $response= new JsonResponse();
+        $response->headers->set('Content-Type', 'application/text');
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type', true);
+        return $response;
     }
 }
